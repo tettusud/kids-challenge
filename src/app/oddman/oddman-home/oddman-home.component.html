@@ -1,0 +1,12 @@
+
+<main>
+    <h3>Find odd one out</h3>
+    <div class="questions-containers">
+        <mat-grid-list cols="2" rowHeight="fit">
+            <mat-grid-tile  *ngFor="let animal of currentQuestion.choices">
+                <img src="{{imagesFolder}}/{{animal}}.svg"  (click)="openDialog(animal)"/>
+            </mat-grid-tile>
+          </mat-grid-list>
+    </div>
+</main>
+

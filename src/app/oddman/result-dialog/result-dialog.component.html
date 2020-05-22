@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>
+  <ng-container *ngIf="data.correct else wrong">
+   Good Job
+   <mat-icon aria-hidden="false" aria-label="Example home icon">check_circle_outline</mat-icon>
+
+  </ng-container>
+  <ng-template #wrong>
+    Wrong answer    <mat-icon aria-hidden="false" aria-label="Example home icon">error</mat-icon>
+
+    <div>Try again</div>
+  </ng-template>
+</h1>
+<div mat-dialog-content>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button  cdkFocusInitial [mat-dialog-close]="data.correct" *ngIf="data.correct else wrongAnswerBtn">Next</button>
+  <ng-template #wrongAnswerBtn>
+    <button mat-button (click)="onNoClick()">OK</button>
+  </ng-template>
+</div>

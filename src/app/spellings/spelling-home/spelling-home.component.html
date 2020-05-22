@@ -1,0 +1,31 @@
+
+
+<div class="">
+  <mat-grid-list cols="4" rowHeight="4:1">
+    <mat-grid-tile *ngFor="let img of data">
+      <img src="{{imagesFolder}}/{{img}}.svg" />
+      </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<!-- 
+<form [formGroup]="group">
+  <mat-card>
+    <mat-grid-list cols="1" rowHeight="fit">
+      <mat-grid-tile >
+          <img src="{{imagesFolder}}/{{currentImage}}.svg" />
+      </mat-grid-tile>
+    </mat-grid-list>
+    
+    <mat-form-field appearance="fill">
+      <input matInput placeholder="Type Spelling" formControlName="spelling">
+    </mat-form-field>
+    <button mat-button (click)="checkSpelling()">Check Spelling</button>
+    <div>
+      <span *ngIf="message">
+        {{message}}
+      </span>
+    </div>
+  </mat-card>
+  
+</form> -->
